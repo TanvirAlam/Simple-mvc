@@ -11,9 +11,12 @@ class Controller {
 	
 	public function invoke()
 	{
-		//if (!isset($_GET['book']))
-        $books = $this->model->getBookList();
-        include 'view/booklist.php';
+		if (!isset($_GET['addbook']) || isset($_GET['cancel'])) {
+            $books = $this->model->getBookList();
+            include 'view/booklist.php';
+        } else {
+            include 'view/addbooklistform.php';
+        }
 	}
 }
 
