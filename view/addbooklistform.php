@@ -30,33 +30,13 @@
                 <div class="col-md-8">
                     <div class="card">
                         <div class="card-header">Create book database</div>
-
                         <div class="card-body">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>Book Name</th>
-                                    <th>Action</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <?php
-                                    foreach ($books as $title => $book)
-                                    {
-                                        echo '<tr>
-                                                <td>
-                                                    '.$book->title.'
-                                                </td>
-                                                <td>
-                                                     <a class="btn btn-danger" href="#" role="button">Delete</a>
-                                                </td>
-                                              </tr>';
-                                    }
-                                ?>
-                                </tbody>
-                            </table>
                             <div class="form-check-label">
-                                <a class="btn btn-primary" href="index.php?addbook" role="button">Add books</a>
+                                <input type="text" name="book" class="form-group">
+                                <a class="btn btn-primary" href="#" role="button">Save</a>
+                            </div>
+                            <div class="form-check-label">
+                                <a class="btn btn-danger" href="index.php?cancel" role="button">Cancel</a>
                             </div>
                         </div>
 
