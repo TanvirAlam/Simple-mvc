@@ -12,18 +12,10 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="css/app.css" rel="stylesheet">
+    <link href="resource/css/app.css" rel="stylesheet">
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                Simple MVC
-            </a>
-        </div>
-    </nav>
-
     <main class="py-4">
         <div class="container">
             <div class="row justify-content-center">
