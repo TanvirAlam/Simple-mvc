@@ -30,7 +30,6 @@
                 <div class="col-md-8">
                     <div class="card">
                         <div class="card-header">Create book database</div>
-
                         <div class="card-body">
                             <table class="table">
                                 <thead>
@@ -41,14 +40,14 @@
                                 </thead>
                                 <tbody>
                                 <?php
-                                    foreach ($books as $title => $book)
+                                    while ($row = $books->fetch(PDO::FETCH_ASSOC))
                                     {
                                         echo '<tr>
                                                 <td>
-                                                    '.$book->title.'
+                                                    '.$row['title'].'
                                                 </td>
                                                 <td>
-                                                     <a class="btn btn-danger" href="#" role="button">Delete</a>
+                                                     <a class="btn btn-danger" href="index.php?delete&bookId='.$row['id'].'" role="button">Delete</a>
                                                 </td>
                                               </tr>';
                                     }
