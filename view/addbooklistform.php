@@ -16,14 +16,6 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                Simple MVC
-            </a>
-        </div>
-    </nav>
-
     <main class="py-4">
         <div class="container">
             <div class="row justify-content-center">
@@ -31,15 +23,16 @@
                     <div class="card">
                         <div class="card-header">Create book database</div>
                         <div class="card-body">
-                            <div class="form-check-label">
-                                <input type="text" name="book" class="form-group">
-                                <a class="btn btn-primary" href="#" role="button">Save</a>
-                            </div>
+                            <form name="addForm" method="post" action="index.php?formSubmit">
+                                <div class="form-check-label">
+                                    <input type="text" name="book" class="form-group">
+                                    <input type="submit" value="Submit">
+                                </div>
+                            </form>
                             <div class="form-check-label">
                                 <a class="btn btn-danger" href="index.php?cancel" role="button">Cancel</a>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

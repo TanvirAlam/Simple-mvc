@@ -1,10 +1,17 @@
 <?php
-
+/*
+ * This is a typical Model structure that reprent a table
+ */
 class Book {
-	public $title;
-	
-	public function __construct($title)
+    /**
+     * @var $id, Title
+     */
+	protected $id;
+    protected $title;
+
+	public function __construct($id, $title)
     {  
+        $this->id = $id;
         $this->title = $title;
-    } 
+    }
 }
