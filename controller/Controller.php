@@ -22,9 +22,6 @@ class Controller {
      */
 	public function invoke()
 	{
-        $books = $this->model->getBookList();
-        include 'view/booklist.php';
-
         if (isset($_GET['addbook'])) {
             include 'view/addbooklistform.php';
         }
@@ -41,5 +38,16 @@ class Controller {
         if (isset($_GET['delete'])) {
             $this->model->deleteBook($_REQUEST['bookId']);
         }
+
+        return $this->show();
+    }
+
+    /**
+     * Returns main dashboard with list
+     */
+    public function show()
+    {
+        $books = $this->model->getBookList();
+        include 'view/booklist.php';
     }
 }

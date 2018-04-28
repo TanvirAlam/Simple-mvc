@@ -6,7 +6,6 @@ include_once("model/Book.php");
 include("config/database.php");
 
 class Model {
-
     /**
      * @var database
      */
