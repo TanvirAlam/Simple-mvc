@@ -26,7 +26,7 @@
                             <form name="addForm" method="post" action="index.php?formSubmit">
                                 <div class="form-check-label">
                                     <input type="text" name="book" class="form-group">
-                                    <input type="submit" value="Submit">
+                                    <input type="submit" value="Submit" required="required">
                                 </div>
                             </form>
                             <div class="form-check-label">
