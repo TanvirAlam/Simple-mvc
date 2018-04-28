@@ -10,6 +10,8 @@ class Model {
      * @var database
      */
     private $con;
+    private $id;
+    private $title;
 
     /**
      * Model constructor.
@@ -45,6 +47,11 @@ class Model {
      */
     public function saveBook($title)
     {
+        //Simple basic validation checking if the field is empty
+        if (empty($title)) {
+            return;
+        }
+
         $insert = $this->con->pdo->prepare("INSERT INTO books (title) VALUES (:title)");
         return $insert->execute([':title' => $title]);
     }
